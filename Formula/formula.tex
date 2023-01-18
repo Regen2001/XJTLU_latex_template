@@ -1,0 +1,168 @@
+\documentclass[12pt]{article}
+
+\usepackage[UTF8, scheme = plain]{ctex} %中文设置同时标签保留中文
+\usepackage{amsmath,amssymb,amsfonts} % 数学公式
+\usepackage{cases} %多行公式的副编号
+\usepackage{ulem} % 下划线等
+\usepackage[hmargin=1in,vmargin=1in]{geometry} %页面大小设置
+
+\defaultfontfeatures{Ligatures=TeX}
+
+
+\begin{document}
+
+\begin{equation}
+    \text{\sout{$V$}}_m(t) = \frac{\pi}{4}\int_0^{L_m}[D(\xi,t)]^2d\xi
+\end{equation}
+
+\begin{equation}
+    \text{\sout{$V$}}_C(t) = \text{\sout{$V$}}_R + \text{\sout{$V$}}_m(t) - \text{\sout{$V$}}_{max}
+\end{equation}
+
+\begin{equation}
+    F = \frac{\partial}{\partial t} \int_{C\text{\sout{$V$}}}V(x,t)\rho d\text{\sout{$V$}} + \int_{CS}V(x,t)\rho V(x,t) dA
+    \label{jet_thrust_F}
+\end{equation}
+
+\begin{equation}
+    \frac{p_m}{\rho} + \frac{V_m^2}{2} + gz_m = \frac{p_j}{\rho} + \frac{V_j^2}{2} + gz_j + \int_{s_o}^{s_j}\frac{dV(s,t)}{dt}ds
+\end{equation}
+
+\begin{align}
+    T_{f(h)} = \frac{1}{2}C_x\rho V^2S \\
+    D = \frac{1}{2}C_D\rho _w S_wU^2 \nonumber \\
+    T_{f(V)} = \frac{1}{2}C_z\rho V^2S
+\end{align}
+
+\begin{subnumcases}{}
+    D = \frac{1}{2}C_D\rho _w S_wU^2 \label{drag} \\
+    L = \frac{1}{2}C_L\rho _w S_wU^2
+\end{subnumcases}
+
+\begin{equation}
+    \eta _f = \frac{2V}{V + V_j} = \frac{V}{V + \frac{\Delta V}{2}}
+\end{equation}
+
+\begin{align}
+    T_{j(h)} = T_{j}\cos{\alpha} \\
+    T_{j(v)} = T_J\sin{\alpha}
+\end{align}
+
+\begin{align}
+    &F_r + D + R_A = T_{j(h)} + T_{f(h)} &\ &\text{horizontal direction} \\
+    &B = T_{j(h)} + T_{f(h)} + L &\ &\text{vertical direction}
+\end{align}
+
+\begin{equation}
+    C_{Df} = 
+    \begin{cases}
+        \frac{1.328}{Re_L^{1/5}} & Re_L \le 5\times 10^5 \\
+        \frac{0.0735}{Re_L^{1/5}} - \frac{1742}{Re_L} & 5\times 10^5 \le Re_L \le 10^7 \\
+        \frac{0.455}{\left( \log Re_L \right)^{2.58}} - \frac{1742}{Re_L} & 10^7 \le Re_L \le 10^9
+    \end{cases}
+\end{equation}
+
+\begin{equation}
+    \bar{T}=\rho \frac{\pi ^3}{16}L^2D^2f^2
+\end{equation}
+
+\begin{equation}
+    ma = \bar{T} \left( 1-e^{-\lambda t} \right) - \frac{1}{2}C_d\rho AV^2
+\end{equation}
+
+\begin{equation}
+    \frac{dV}{dt} = \frac{\bar{T} \left( 1-e^{-\lambda t} \right) - \frac{1}{2}C_d\rho AV^2}{m}
+\end{equation}
+
+\begin{equation}
+    \begin{cases}
+        m \ddot{x_1} &= 2kx_1 - kx_2 \\
+        m \ddot{x_2} &= -kx_1 + 2kx_2 - kx_3 \\
+        m \ddot{x_3} &= -kx_2 + 2kx_3 - kx_4 \\
+        \cdots \\
+        m \ddot{x_8} &= -kx_7 + 2kx_8 - kx_9 \\
+        m \ddot{x_9} &= -kx_8 + 2kx_9 - kx_{10} \\
+        m \ddot{x_{10}} &= -kx_9 + 2kx_{10}
+    \end{cases}
+\end{equation}
+
+\begin{equation}
+    \mathbf{M}
+    \begin{bmatrix}
+        \ddot{x_1} \\
+        \ddot{x_2} \\
+        \ddot{x_3} \\
+        \vdots \\
+        \ddot{x_8} \\
+        \ddot{x_9} \\
+        \ddot{x_{10}} \\
+    \end{bmatrix}
+    =
+    \mathbf{K_1}
+    \begin{bmatrix}
+        x_1 \\
+        x_2 \\
+        x_3 \\
+        \vdots \\
+        x_8 \\
+        x_9 \\
+        x_{10}
+    \end{bmatrix}
+\end{equation}
+
+\begin{equation}
+    \left( \mathbf{K_1} -\omega^2 \mathbf{M_1} \right) = 
+    \begin{bmatrix}
+        2k-\omega^2 m & -k & 0 & \cdots & 0 & 0 & 0\\
+        -k & 2k-\omega^2 m & -k & \cdots & 0 & 0 & 0\\
+        -k & -k & 2k-\omega^2 m & \cdots & 0 & 0 & 0\\
+        \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\
+        0 & 0 & 0 & \cdots & 2k-\omega^2 m & -k & 0 \\
+        0 & 0 & 0 & \cdots & -k & 2k-\omega^2 m & -k \\
+        0 & 0 & 0 & \cdots & 0 & -k & 2k-\omega^2 m \\
+    \end{bmatrix}
+\end{equation}
+
+\begin{equation}
+    \mathbf{M} \ddot{\mathbf{x}} =
+    \begin{bmatrix}
+        2k & -k & 0 & \cdots & 0 & 0 & 0 \\
+        -k & 2k & -k & \cdots & 0 & 0 & 0 \\
+        \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\
+        0 & 0 & 0 & \cdots & -k & 2k & -k \\
+        0 & 0 & 0 & \cdots & 0 & -k & k \\
+    \end{bmatrix}
+    \mathbf{X} +
+    \begin{bmatrix}
+        0 \\
+        0 \\
+        \vdots \\
+        0 \\
+        1
+    \end{bmatrix} f_1
+\end{equation}
+
+\begin{align}
+    \sin \theta &\approx \theta & \cos \theta &\approx 1
+\end{align}
+
+\begin{equation}
+    \begin{cases}
+        m_1 l_1^2 \ddot{\theta_1} = -m_1 g l_1 \theta_1 + m_2 g l_1 \left( \theta_2 - \theta_1  \right) \\
+        m_2 l_1 l_2 \ddot{\theta_1} + m_2 l_2^2 \ddot{\theta_2} = -m_2 g l_2 \theta_2
+    \end{cases}
+\end{equation}
+
+\begin{align}
+    \theta_1(0) &= -0.57 \text{rad} & \ddot{\theta_1}(0) &= 0 \text{rad}/s \\
+    \theta_2(0) &= 0 \text{rad} & \ddot{\theta_2} &= 0 \text{rad}/s
+\end{align}
+
+\begin{equation}
+    \begin{split}
+        \frac{V_m}{V_{in}}(s) &= \frac{1}{m}\frac{p_7}{V_{in}}(s) = \frac{\left\lvert \mathbf{A}_2\left(\mathbf{V}\right)\right\rvert}{\left\lvert \mathbf{A} \right\rvert} \\
+        &= \frac{\left(-k_a \left(m+m m_a s\right)+ \left(m+\left(m s+b_a\right) m_a\right)\right)s}{m (k+ (b+m s)s) \left(s-k_a\right)+m m_a \left(b_as^2+(k+ (b+m s)s) \left(s-k_a\right)\right) s}
+    \end{split}
+\end{equation}
+
+\end{document}
