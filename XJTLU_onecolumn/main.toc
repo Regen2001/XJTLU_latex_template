@@ -1,0 +1,2 @@
+\contentsline {section}{\numberline {1}Theory and Model on the dynamics of squids}{1}{}%
+\contentsline {subsection}{\numberline {1.1}Kinematics and dynamics of squids}{2}{}%
