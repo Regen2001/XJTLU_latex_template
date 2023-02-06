@@ -1,0 +1,20 @@
+\documentclass[conference, onecolumn]{IEEEtran}
+%\documentclass[twocolumn]{article}
+
+\input{introduction/PACKAGE.tex} % 库引用
+
+\input{introduction/INTRODUCTION.tex} % 导言区
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\subfile{section/part_1.tex}
+
+\subfile{section/part_2.tex}
+
+\bibliographystyle{ieeetr}
+\bibliography{section/RESOURCE.bib} 
+
+\end{document}

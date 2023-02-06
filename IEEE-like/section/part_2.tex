@@ -1,0 +1,40 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+\section{Homogeneous transformation: Question A}
+
+\subsection{Problem (a)}
+
+Using the $Z-Y-X (\alpha - \beta - \gamma)$ Euler angle convention, the rotation matrix can be calculated as \cite{ craig2005introduction}
+\begin{equation}
+^A_BR_{Z'Y'X'}(\alpha, \beta, \gamma) = R_Z(\alpha) \cdot R_Y(\beta) \cdot R_X(\gamma)
+\label{euler2rot}
+\end{equation}
+where
+\begin{align}
+    R_X(\gamma) &=
+    \begin{bmatrix}
+        1 & 0 & 0 \\
+        0 & \cos(\gamma) & -\sin(\gamma) \\
+        0 & \sin(\gamma) & \cos(\gamma)
+    \end{bmatrix} &
+    R_Y(\beta) &=
+    \begin{bmatrix}
+        \cos(\beta) & 0 & \sin(\beta) \\
+        0 & 1 & 0 \\
+        -\sin(\beta) & 0 & \cos(\beta)
+    \end{bmatrix} &
+    R_Z(\alpha) &=
+    \begin{bmatrix}
+        \cos(\alpha) & -\sin(\alpha) & 0 \\
+        \sin(\alpha) & \cos(\alpha) & 0 \\
+        0 & 0 & 1
+    \end{bmatrix}
+\end{align}
+
+Then, the MATLAB code used to achieve is shown below
+\lstset{language=MATLAB}
+\lstinputlisting[language=MATLAB]{code/euler2rot.m}
+
+\end{document}

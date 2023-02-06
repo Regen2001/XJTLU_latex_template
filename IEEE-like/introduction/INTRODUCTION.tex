@@ -1,0 +1,67 @@
+\defaultfontfeatures{Ligatures=TeX}
+
+%\setsansfont{Tahoma}
+%\setmainfont{Tahoma}
+%设置字体
+
+\graphicspath{{fig/}} %设置图片路径
+
+%\setlength{\parindent}{0pt} %首行无空格
+
+%\linespread{1.5} %行间距设置
+
+%\setlength\columnsep{0.5cm} %栏间距设置
+
+%\titlecontents{section}[0.8cm]{\bfseries}{\contentslabel{2.5 em}}{}{\titlerule*[0.6pc]{$\cdot$}\contentspage\hspace*{0.8cm}}
+%\titlecontents{subsection}[0.8cm]{}{\contentslabel{2.5 em}}{}{\titlerule*[0.6pc]{$\cdot$}\contentspage\hspace*{0.8cm}}
+%\titlecontents{subsubsection}[0.8cm]{}{\contentslabel{2.5 em}}{}{\titlerule*[0.6pc]{$\cdot$}\contentspage\hspace*{0.8cm}}
+% 设置contents格式
+
+%\titleformat*{\section}{\centering \bfseries}
+%\titleformat*{\subsection}{\bfseries}
+%\titleformat*{\subsubsection}{\normalsize}
+% 设置section格式
+
+%\renewcommand{\abstractnamefont}{\setmainfont{Times New Roman} \bfseries \slshape} % 设置abstract标题格式
+
+\pagestyle{fancy}
+\fancyhf{}
+
+%\fancyhead[L]{MEC303 - Assignment 1} % 页眉内容
+%\fancyhead[L]{\ifthenelse{\value{page} = 1}{MEC303 - Assignment 1}{Robot Development and Spatial Transformations}} %不同情况页眉不同
+%\fancyhead[R]{\ifthenelse{\value{page} = 1}{Xi'an Jiaotong-liverpool University}{School of advanced technology}} %不同情况页眉不同
+\fancyfoot[C]{\thepage\ \textbackslash \ \pageref{LastPage}} % 页脚内容
+
+\renewcommand{\headrulewidth}{0mm} % 页眉线宽
+
+\title{SKA203 Assignment 1 \\ {\footnotesize adsadsa sadas dsadasdas}}
+%\title{A Squid-like Bionic Robot} % 标题
+%\author{Yuliang Xiao} % 作者
+\author{\IEEEauthorblockN{San Zhang}
+\IEEEauthorblockA{\textit{School of advanced technology} \\
+\textit{Xi'an Jiaotong-liverpool University}\\
+Suzhou, China \\
+San.ZHang@student.xjtlu.edu.cn}} % 作者
+%\date{\today}
+\date{} % 日期
+
+\lstset{
+%    alsolanguage = Java,
+	alsolanguage = [ANSI]C,
+	alsolanguage = matlab,
+%    alsolanguage = Python,
+	basicstyle = \normalsize\setmainfont{JetBrains Mono}, %设置字体族
+	breaklines = true, %自动换行
+	keywordstyle = \bfseries\color{NavyBlue}, %设置关键字为粗体，颜色为 NavyBlue
+	morekeywords = {}, %设置更多的关键字，用逗号分隔
+	emph = {self}, %指定强调词，如果有多个，用逗号隔开
+    emphstyle = \bfseries\color{Rhodamine}, %强调词样式设置
+    commentstyle = \color{black!50!white}, %设置注释样式，浅灰色
+    stringstyle = \bfseries\color{PineGreen!90!black}, %设置字符串样式
+    columns = flexible, %使代码更紧凑
+    %numbers = left, %显示行号在左边
+    %numbersep = 0em, %设置行号的具体位置
+    %numberstyle = \footnotesize, % 缩小行号
+    frame = single, %边框
+    framesep = 0.5 em, %设置代码与边框的距离
+}
