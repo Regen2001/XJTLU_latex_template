@@ -1,0 +1,54 @@
+\defaultfontfeatures{Ligatures=TeX}
+
+\graphicspath{{fig/}} %设置图片路径
+
+\setsansfont{Times New Roman}
+\setmainfont{Times New Roman}
+%设置字体
+
+\linespread{1.5} %行间距设置
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\titlecontents{section}[0.8cm]{\bfseries}{\contentslabel{2em}}{}{\titlerule*[0.6pc]{$\cdot$}\contentspage\hspace*{0.8cm}}
+\titlecontents{subsection}[0.8cm]{}{\contentslabel{2em}}{}{\titlerule*[0.6pc]{$\cdot$}\contentspage\hspace*{0.8cm}}
+\titlecontents{subsubsection}[0.8cm]{}{\contentslabel{2em}}{}{\titlerule*[0.6pc]{$\cdot$}\contentspage\hspace*{0.8cm}}
+% 设置contents格式
+
+\titleformat{\section}[display]{\fontsize{20pt}{\baselineskip} \bfseries}{\newpage Chapter\, \thesection}{0 pt}{}[]
+\titleformat*{\subsection}{\fontsize{16pt}{\baselineskip} \bfseries}
+\titleformat*{\subsubsection}{\fontsize{13pt}{\baselineskip} \bfseries}
+% 设置section格式
+
+\pagestyle{fancy}
+\fancyhf{}
+
+%\fancyhead[R]{MTH227 - Final Project} % 页眉内容
+% \fancyhead[L]{\ifthenelse{\value{page} = 1}{MTH227 - Final Project}{Squid-like Bionic Robot}} %不同情况页眉不同
+% \fancyhead[R]{\date{October 10, 2020}}
+\fancyfoot[c]{\thepage\ \textbackslash \ \pageref{LastPage}} % 页脚内容
+
+\renewcommand{\headrulewidth}{0mm} % 页眉线宽
+%\renewcommand{\footrulewidth}{0.25mm} % 页脚线宽
+
+\lstset{
+    alsolanguage = Java,
+	%alsolanguage = [ANSI]C,      %可以添加很多个alsolanguage,如alsolanguage=matlab,alsolanguage=VHDL等
+	alsolanguage = matlab,
+    alsolanguage = Python,
+	basicstyle = \small\setmainfont{JetBrains Mono}, %设置字体族
+	breaklines = true, %自动换行
+	keywordstyle = \bfseries\color{NavyBlue}, %设置关键字为粗体，颜色为 NavyBlue
+	morekeywords = {}, %设置更多的关键字，用逗号分隔
+	emph = {self}, %指定强调词，如果有多个，用逗号隔开
+    emphstyle = \bfseries\color{Rhodamine}, %强调词样式设置
+    commentstyle = \color{black!50!white}, %设置注释样式，浅灰色
+    stringstyle = \bfseries\color{PineGreen!90!black}, %设置字符串样式
+    columns = flexible, %使代码更紧凑
+    %numbers = left, %显示行号在左边
+    %numbersep = 2em, %设置行号的具体位置
+    %numberstyle = \footnotesize, % 缩小行号
+    frame = single, %边框
+    framesep = 1 em, %设置代码与边框的距离
+}

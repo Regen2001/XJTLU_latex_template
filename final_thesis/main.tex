@@ -1,0 +1,32 @@
+\documentclass[12pt]{article}
+%\documentclass[conference]{IEEEtran}
+
+\input{introduction/PACKAGE.tex} % 库引用
+
+\input{introduction/INTRODUCTION.tex} % 导言区
+
+
+\begin{document}
+
+\subfile{introduction/cover.tex}
+
+\subfile{section/abstract.tex}
+\addcontentsline{toc}{section}{Abstract}
+\newpage
+
+\subfile{section/acknowledge.tex}
+\addcontentsline{toc}{section}{Acknowledge}
+\newpage
+
+\subfile{section/list&table.tex}
+
+\subfile{section/theory.tex}
+
+\bibliographystyle{ieeetr}
+\bibliography{section/RESOURCE.bib}
+\addcontentsline{toc}{section}{References}
+
+\newpage
+\subfile{section/appendix.tex}
+
+\end{document}
