@@ -8,4 +8,6 @@ SAT的作业都很少去规定作业要是什么样的模板去写, 除了个别
 
 `Formula`文件里面把平时用过的比较复杂的公式都放进去了, 应该可以当做输入公式的参考了.
 
+编译环境是vscode，MacTex，编译指令为XeLaTeX。
+
 代码字体考虑到不同的系统，用的是JetBrains的开源字体[JetBrains Mono](https://www.jetbrains.com/lp/mono/)
