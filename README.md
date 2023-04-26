@@ -11,3 +11,5 @@ SAT的作业都很少去规定作业要是什么样的模板去写, 除了个别
 编译环境是vscode, MacTex, 编译指令为XeLaTeX。
 
 代码字体考虑到不同的系统，用的是JetBrains的开源字体[JetBrains Mono](https://www.jetbrains.com/lp/mono/). Windows系统在安装字体的时候要选择给所有用户安装, 否则无法编译
+
+我自己电脑性能不太好打开的文件一大就容易卡，所以大部分都处理成了多文件编译的方式可以参考[LaTeX多文件编译的方法总结](https://www.shuzhiduo.com/A/B0zqM742zv/)
